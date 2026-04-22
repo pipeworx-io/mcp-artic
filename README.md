@@ -1,36 +1,54 @@
-# @pipeworx/mcp-artic
+# mcp-artic
 
-MCP server for the [Art Institute of Chicago API](https://api.artic.edu) — search artworks, get artwork and artist details, and browse exhibitions. Free, no auth required.
+Art Institute of Chicago MCP — wraps the ARTIC public API (free, no auth)
+
+Part of [Pipeworx](https://pipeworx.io) — an MCP gateway connecting AI agents to 250+ live data sources.
 
 ## Tools
 
 | Tool | Description |
 |------|-------------|
-| `search_artworks` | Full-text search across the collection |
-| `get_artwork` | Detailed record for a single artwork by ID |
-| `get_artist` | Artist record by ID |
-| `get_exhibitions` | Current and recent exhibitions |
 
 ## Quick Start
 
-Add to your MCP client config:
+Add to your MCP client (Claude Desktop, Cursor, Windsurf, etc.):
 
 ```json
 {
   "mcpServers": {
     "artic": {
-      "type": "url",
-      "url": "https://gateway.pipeworx.io/artic"
+      "url": "https://gateway.pipeworx.io/artic/mcp"
     }
   }
 }
 ```
 
-## CLI Usage
+Or connect to the full Pipeworx gateway for access to all 250+ data sources:
 
-```bash
-npx @anthropic-ai/mcp-client https://gateway.pipeworx.io/artic
+```json
+{
+  "mcpServers": {
+    "pipeworx": {
+      "url": "https://gateway.pipeworx.io/mcp"
+    }
+  }
+}
 ```
+
+## Using with ask_pipeworx
+
+Instead of calling tools directly, you can ask questions in plain English:
+
+```
+ask_pipeworx({ question: "your question about Artic data" })
+```
+
+The gateway picks the right tool and fills the arguments automatically.
+
+## More
+
+- [All tools and guides](https://github.com/pipeworx-io/examples)
+- [pipeworx.io](https://pipeworx.io)
 
 ## License
 
