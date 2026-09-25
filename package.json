@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-artic",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Art Institute of Chicago MCP — wraps the ARTIC public API (free, no auth)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-4dad76721a80e21b1841e54f2c0f1037412e4b4e89fa1d0205d499b9d3f59640",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-739a60a91af2f6a0c58cdc7f74ae636a9ffa1e74d1c5f93d050484c85a172c4e",
+    "sourceCommit": "454041882179fae560c06e770b6b7a2f33970015"
   }
 }
