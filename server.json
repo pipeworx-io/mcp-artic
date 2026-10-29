@@ -3,7 +3,7 @@
   "name": "io.github.pipeworx-io/artic",
   "title": "Artic",
   "description": "Art Institute of Chicago MCP — wraps the ARTIC public API (free, no auth)",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "websiteUrl": "https://pipeworx.io/packs/artic",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-artic",

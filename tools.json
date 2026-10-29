@@ -1,0 +1,68 @@
+[
+  {
+    "name": "search_artworks",
+    "description": "Search the Art Institute of Chicago collection by keyword. Returns artwork titles, artists, dates, mediums, and image IDs. Use get_artwork to fetch full details.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": {
+          "type": "string",
+          "description": "Search query (e.g., \"monet water lilies\")"
+        },
+        "limit": {
+          "type": "number",
+          "description": "Number of results to return (1-100, default 10)"
+        }
+      },
+      "required": [
+        "query"
+      ]
+    }
+  },
+  {
+    "name": "get_artwork",
+    "description": "Get complete details for an artwork by ID. Returns title, artist, date, medium, dimensions, description, credit line, and high-resolution image.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "ARTIC artwork ID (e.g., 27992)"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "get_artist",
+    "description": "Get an artist's biography and their artworks by ID. Returns name, birth/death dates, bio text, and linked artwork IDs.",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "ARTIC artist ID"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "get_exhibitions",
+    "description": "Browse current and past exhibitions at the Art Institute. Returns exhibition titles, descriptions, and status (active or closed).",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "number",
+          "description": "Number of exhibitions to return (1-100, default 10)"
+        }
+      },
+      "required": []
+    }
+  }
+]
